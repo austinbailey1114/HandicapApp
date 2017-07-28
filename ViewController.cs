@@ -18,17 +18,17 @@ namespace HandicApp
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
             // will eventually calculate into actual handicap based on data
-            HandicapViewer.Text = "Your handicap is: " + 1;
+            HandicapViewer.Text = "Your handicap is: ";
             EnterButton.TouchUpInside += (object sender, EventArgs e) => {
                 // Convert the phone number with text to a number
                 // using PhoneTranslator.cs
                 string s = ScoreInput.Text;
-
-                // Dismiss the keyboard if text field was tapped
                 ScoreInput.ResignFirstResponder();
-                string score = Golfer.testFunction(s);
+                string[] scoreString = new string[20];
+                scoreString[0] = s;
+                double handicap = Golfer.calculateHandicap(scoreString);
                 //score will actually come from a new calculation
-                HandicapViewer.Text = "Your handicap is: " + score;
+                HandicapViewer.Text = "Your handicap is: " + handicap;
             };
         }
 

@@ -39,11 +39,11 @@ namespace HandicApp {
             else {
                 double sum = differentials[0] +differentials[1] + differentials[2] + differentials[3] + differentials[4]
                     + differentials[5] + differentials[6] + differentials[7] + differentials[8] + differentials[9];
-                return (double) (sum/10) * .96;
+                return (sum/10) * .96;
             }
         }
 
-        public static void updateScores(List<string[]> newScores, string name) {
+        public static string updateScores(List<string[]> newScores, string name) {
             string[] data = File.ReadAllLines(name);
             List<string[]> scores = new List<string[]>();
             string[] newNewScores = new string[20];
@@ -61,13 +61,14 @@ namespace HandicApp {
                 newNewScores[i] = concatenate[i][0];
             }
             double newHandicap = calculateHandicap(newNewScores);
-            Console.WriteLine();
-            Console.WriteLine("Your updated handicap is: " + newHandicap);
+            //Console.WriteLine();
+            //Console.WriteLine("Your updated handicap is: " + newHandicap);
             StreamWriter sw = new StreamWriter(name);
             for(int i = 0; i < concatenate.Count; i++) {
                 sw.WriteLine(concatenate[i][0] + "," + concatenate[i][1] + "," + concatenate[i][2]);
             }
             sw.Close();
+            return Convert.ToString(newHandicap);
         }
 
         public static void searchDate(string date, string name) {
@@ -99,8 +100,8 @@ namespace HandicApp {
                 }
             }
         }
-        public static string testFunction(string s) {
-            return s;
+        public static double testFunction(string[] s) {
+            return Convert.ToDouble(s[0]);
         }
     }
 }
