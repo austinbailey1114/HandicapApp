@@ -1,0 +1,39 @@
+# Version: 10.10.0.36 (d15-2: d2270eec)
+# [first argument, ignore] # --cache
+/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/lib/mtouch/mtouch.exe \
+	/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/mtouch-cache \
+	--sim \
+	/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/bin/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/HandicApp.app \
+	--executable \
+	HandicApp \
+	--fastdev \
+	--debug \
+	--nolink \
+	--sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--sdk \
+	10.3 \
+	--targetver \
+	10.3 \
+	--http-message-handler=HttpClientHandler \
+	--abi=x86_64 \
+	--symbollist \
+	/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhoneSimulator/Debug/device-builds/iphone8.4-10.3.1/mtouch-symbols.list \
+	--dsym=no \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Data.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Mono.Data.Sqlite.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	--target-framework \
+	"Xamarin.iOS,v1.0" \
+	/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/bin/iPhoneSimulator/Debug/HandicApp.exe \
