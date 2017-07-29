@@ -73,9 +73,7 @@ namespace HandicApp {
             return Convert.ToString(newHandicap);
         }
 
-        public static void searchDate(string date, string name) {
-            Console.WriteLine();
-            Console.WriteLine("Score(s) shot on " + date + ": ");
+        public static string searchDate(string date, string name) {
             string[] data = File.ReadAllLines(name);
             List<string[]> scores = new List<string[]>();
             for(int i = 0; i < data.Length; i++) {
@@ -83,14 +81,14 @@ namespace HandicApp {
             }
             for(int i = 0; i < scores.Count; i++) {
                 if(scores[i][1] == date) {
-                    Console.WriteLine(scores[i][0] + " at " + scores[i][2]);
+                    //temporary
+                    return (scores[i][0] + " at " + scores[i][2]);
                 }
             }
+            return "No results!";
         }
 
-        public static void searchCourse(string course, string name) {
-            Console.WriteLine();
-            Console.WriteLine("Score(s) shot at " + course + ": ");
+        public static string searchCourse(string course, string name) {
             string[] data = File.ReadAllLines(name);
             List<string[]> scores = new List<string[]>();
             for(int i = 0; i < data.Length; i++) {
@@ -98,9 +96,11 @@ namespace HandicApp {
             }
             for(int i = 0; i < scores.Count; i++) {
                 if(scores[i][2] == course) {
-                    Console.WriteLine(scores[i][0] + " on " + scores[i][1]);
+                    //temporary
+                    return (scores[i][0] + " on " + scores[i][1]);
                 }
             }
+            return "No results!";
         }
         public static double testFunction(string[] s) {
             return Convert.ToDouble(s[0]);
