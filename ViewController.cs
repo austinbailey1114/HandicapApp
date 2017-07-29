@@ -19,7 +19,7 @@ namespace HandicApp
         {
             base.ViewDidLoad();
             // will eventually calculate into actual handicap based on data
-            HandicapViewer.Text = "Your handicap is: ";
+            //HandicapViewer.Text = "Your handicap is: ";
             EnterButton.TouchUpInside += (object sender, EventArgs e) => {
                 string s = ScoreInput.Text;
                 ScoreInput.ResignFirstResponder();
@@ -28,9 +28,10 @@ namespace HandicApp
                 StreamWriter sw = File.CreateText("austin.txt");
                 sw.WriteLine(scoreString[0]);
                 sw.Close();
-                Golfer austin = new Golfer("austin.txt");
-                double handicap = austin.handicap;
-                HandicapViewer.Text = "Your handicap is: " + handicap;
+                GolferController.name = "austin.txt";
+                //Golfer austin = new Golfer("austin.txt");
+                //double handicap = austin.handicap;
+                //HandicapViewer.Text = "Your handicap is: " + handicap;
             };
 
 
@@ -41,12 +42,10 @@ namespace HandicApp
         public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
         {
             base.PrepareForSegue (segue, sender);
-
             // set the View Controller that’s powering the screen we’re
             // transitioning to
-
-            var DataController = segue.DestinationViewController as GolferController;
-
+            var golferController = segue.DestinationViewController as GolferController;
+            //if (golferController != null) golferController.name = "austin";
             //set the Table View Controller’s list of phone numbers to the
             // list of dialed phone numbers
 

@@ -97,7 +97,7 @@
         </scene>
         <scene sceneID="2579">
             <objects>
-                <viewController id="2580" sceneMemberID="viewController">
+                <viewController id="2580" sceneMemberID="viewController" customClass="SearchController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2575"/>
                         <viewControllerLayoutGuide type="bottom" id="2576"/>
@@ -106,26 +106,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labtest2el" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2789" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="125" y="366" width="104" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="2789"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="2789"/>
-                            </mask>
-                        </variation>
+                        <subviews/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="2582"/>
+                    <tabBarItem key="tabBarItem" title="Search" id="2582"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2583" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -133,7 +116,7 @@
         </scene>
         <scene sceneID="2584">
             <objects>
-                <viewController id="2585" sceneMemberID="viewController">
+                <viewController id="2585" sceneMemberID="viewController" customClass="HandicapViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2577"/>
                         <viewControllerLayoutGuide type="bottom" id="2578"/>
@@ -143,8 +126,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2788" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="127" y="153" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2795" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="103" y="137" width="145" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your handicap is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2803" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="57" y="198" width="201" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter new score below" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2816" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="64" y="316" width="194" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter new score" borderStyle="roundedRect" minimumFontSize="17" id="2817" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="64" y="354" width="184" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2818" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="120" y="412" width="70" height="30"/>
+                                <state key="normal" title="Enter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="UIButton2818_TouchUpInside:" destination="2585" id="2819" eventType="touchUpInside"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your new handicap is:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2820" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="48" y="476" width="210" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -152,17 +167,32 @@
                         </subviews>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="2788"/>
+                                <exclude reference="2795"/>
+                                <exclude reference="2803"/>
+                                <exclude reference="2816"/>
+                                <exclude reference="2817"/>
+                                <exclude reference="2818"/>
+                                <exclude reference="2820"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="2788"/>
+                                <include reference="2795"/>
+                                <include reference="2803"/>
+                                <include reference="2816"/>
+                                <include reference="2817"/>
+                                <include reference="2818"/>
+                                <include reference="2820"/>
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="2587"/>
-                    <connections/>
+                    <tabBarItem key="tabBarItem" title="Add Scores" id="2587"/>
+                    <connections>
+                        <outlet property="HandicapDisplayer" destination="2803" id="name-outlet-2803"/>
+                        <outlet property="ScoreInput" destination="2817" id="name-outlet-2817"/>
+                        <outlet property="NewHandicapDisplayer" destination="2820" id="name-outlet-2820"/>
+                        <outlet property="EnterInput" destination="2818" id="name-outlet-2818"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2588" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

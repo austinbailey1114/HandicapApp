@@ -112,6 +112,14 @@
     <Compile Include="GolferController.designer.cs">
       <DependentUpon>GolferController.cs</DependentUpon>
     </Compile>
+    <Compile Include="HandicapViewController.cs" />
+    <Compile Include="HandicapViewController.designer.cs">
+      <DependentUpon>HandicapViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SearchController.cs" />
+    <Compile Include="SearchController.designer.cs">
+      <DependentUpon>SearchController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
