@@ -1,0 +1,9 @@
+/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhone/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhone/Debug/device-builds/iphone8.1-10.3.3/ibtool/_BundleResourceWithLogicalName.items
+/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhone/Debug/device-builds/iphone8.1-10.3.3/actool/_PartialAppManifest.items
+/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhone/Debug/device-builds/iphone8.1-10.3.3/actool/_BundleResourceWithLogicalName.items
+/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhone/Debug/device-builds/iphone8.1-10.3.3/optimized/
+/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/bin/iPhone/Debug/HandicApp.pdb
+/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/bin/iPhone/Debug/HandicApp.exe
+/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhone/Debug/HandicApp.exe
+/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhone/Debug/HandicApp.pdb

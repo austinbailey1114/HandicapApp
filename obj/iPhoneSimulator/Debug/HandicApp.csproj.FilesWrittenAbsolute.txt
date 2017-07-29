@@ -7,3 +7,7 @@
 /Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/bin/iPhoneSimulator/Debug/HandicApp.exe
 /Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhoneSimulator/Debug/HandicApp.exe
 /Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhoneSimulator/Debug/HandicApp.pdb
+/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/ibtool/_BundleResourceWithLogicalName.items
+/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/actool/_PartialAppManifest.items
+/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/actool/_BundleResourceWithLogicalName.items
+/Users/austinbailey/Documents/C#Projects/HandicApp/HandicApp/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/
