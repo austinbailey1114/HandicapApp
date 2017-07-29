@@ -10,12 +10,15 @@ namespace HandicApp {
 
         public double handicap;
         public Golfer(string name) {
-            string[] data = File.ReadAllLines(name);
-            string[] scores = new string[20];
-            for(int i = 0; i < data.Length && i < 20; i++) {
-                scores[i] = data[i].Split(',')[0];
+            if (File.Exists(name)) {
+                string[] data = File.ReadAllLines(name);
+                string[] scores = new string[20];
+                for(int i = 0; i < data.Length && i < 20; i++) {
+                    scores[i] = data[i].Split(',')[0];
+                }
+                handicap = calculateHandicap(scores);
             }
-            handicap = calculateHandicap(scores);
+            else handicap = -100;
         }
 
         public static double calculateHandicap(string[] stringScores) {

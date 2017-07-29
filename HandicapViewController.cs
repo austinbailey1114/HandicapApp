@@ -2,6 +2,7 @@ using Foundation;
 using System;
 using UIKit;
 using System.IO;
+using System.Collections.Generic;
 
 namespace HandicApp
 {
@@ -16,31 +17,42 @@ namespace HandicApp
             
             base.ViewDidLoad();
             // will eventually calculate into actual handicap based on data
+
+
             string name = GolferController.name;
-            if (File.Exists(name)) {
-                Golfer currentUser  = new Golfer(name);
+            WelcomeText.Text = "Welcome, "+name+"!";
+            Golfer currentUser  = new Golfer(name + ".txt");
+            if (currentUser.handicap != -100) {
                 double s = currentUser.handicap;
                 HandicapDisplayer.Text = "Your handicap is: " + s;
             }
             else {
-                HandicapDisplayer.Text = "You need to enter more scores!";
+                //StreamWriter sw = File.CreateText(name);
+                //sw.WriteLine(120);
+                //sw.Close();
+                //Golfer newUser = new Golfer(name);
+                HandicapDisplayer.Text = "You are a new user";
+                NewScorePrompt.Text = "Enter your first round below";
+                File.CreateText(name + ".txt");
             }
 
-            EnterInput.TouchUpInside += (object sender, EventArgs e) => {
-                string s = ScoreInput.Text;
+
+            Enter.TouchUpInside += (object sender, EventArgs e) => {
+                string score = ScoreInput.Text;
                 ScoreInput.ResignFirstResponder();
-                string[] scoreString = new string[20];
-                scoreString[0] = s;
-                double newHandicap = Golfer.calculateHandicap(scoreString);
-                NewHandicapDisplayer.Text = "Your new handicap is: " + newHandicap;
+                string date = DateInput.Text;
+                DateInput.ResignFirstResponder();
+                string course = CourseInput.Text;
+                CourseInput.ResignFirstResponder();
+                List<string[]> newScore = new List<string[]>();
+                string data = score + "," + date + "," + course;
+                string[] scoreString = data.Split(',');
+                newScore.Add(scoreString);
+                string newHandicap = Golfer.updateScores(newScore, name + ".txt");
+                NewHandicapDisplayer.Text = "Your updated handicap is: " + newHandicap;
+
+
             };
-
-
-           
-
-
-
-
         }
     }
 }

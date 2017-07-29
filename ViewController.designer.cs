@@ -19,10 +19,6 @@ namespace HandicApp
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UILabel HandicapViewer { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UITextField ScoreInput { get; set; }
 
         void ReleaseDesignerOutlets ()
@@ -30,11 +26,6 @@ namespace HandicApp
             if (EnterButton != null) {
                 EnterButton.Dispose ();
                 EnterButton = null;
-            }
-
-            if (HandicapViewer != null) {
-                HandicapViewer.Dispose ();
-                HandicapViewer = null;
             }
 
             if (ScoreInput != null) {
