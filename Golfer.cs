@@ -7,15 +7,15 @@ using Mono.Data.Sqlite;
 
 namespace HandicApp {
     public class Golfer {
+
+        public double handicap;
         public Golfer(string name) {
             string[] data = File.ReadAllLines(name);
             string[] scores = new string[20];
             for(int i = 0; i < data.Length && i < 20; i++) {
                 scores[i] = data[i].Split(',')[0];
             }
-            double handicap = calculateHandicap(scores);
-            Console.WriteLine();
-            Console.WriteLine("Your Handicap: "+ handicap);
+            handicap = calculateHandicap(scores);
         }
 
         public static double calculateHandicap(string[] stringScores) {
@@ -42,7 +42,6 @@ namespace HandicApp {
                 return (sum/10) * .96;
             }
         }
-
         public static string updateScores(List<string[]> newScores, string name) {
             string[] data = File.ReadAllLines(name);
             List<string[]> scores = new List<string[]>();

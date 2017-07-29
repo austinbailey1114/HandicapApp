@@ -108,6 +108,10 @@
     </Compile>
     <Compile Include="HandicapCalculator.cs" />
     <Compile Include="Golfer.cs" />
+    <Compile Include="GolferController.cs" />
+    <Compile Include="GolferController.designer.cs">
+      <DependentUpon>GolferController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
