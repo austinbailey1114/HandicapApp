@@ -45,7 +45,7 @@ namespace HandicApp {
                 return (sum/10) * .96;
             }
         }
-        public static string updateScores(List<string[]> newScores, string name) {
+        public static string updateScores(string[] newScores, string name) {
             string[] data = File.ReadAllLines(name);
             List<string[]> scores = new List<string[]>();
             string[] newNewScores = new string[20];
@@ -53,9 +53,7 @@ namespace HandicApp {
                 scores.Add(data[i].Split(','));
             }
             List<string[]> concatenate = new List<string[]>();
-            for(int i = 0; i < newScores.Count; i++) {
-                concatenate.Add(newScores[i]);
-            }
+            concatenate.Add(newScores);
             for(int i = 0; i < scores.Count; i++) {
                 concatenate.Add(scores[i]);
             }
@@ -63,8 +61,6 @@ namespace HandicApp {
                 newNewScores[i] = concatenate[i][0];
             }
             double newHandicap = calculateHandicap(newNewScores);
-            //Console.WriteLine();
-            //Console.WriteLine("Your updated handicap is: " + newHandicap);
             StreamWriter sw = new StreamWriter(name);
             for(int i = 0; i < concatenate.Count; i++) {
                 sw.WriteLine(concatenate[i][0] + "," + concatenate[i][1] + "," + concatenate[i][2]);
@@ -102,8 +98,6 @@ namespace HandicApp {
             }
             return "No results!";
         }
-        public static double testFunction(string[] s) {
-            return Convert.ToDouble(s[0]);
-        }
+
     }
 }

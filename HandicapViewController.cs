@@ -44,10 +44,8 @@ namespace HandicApp
                 DateInput.ResignFirstResponder();
                 string course = CourseInput.Text;
                 CourseInput.ResignFirstResponder();
-                List<string[]> newScore = new List<string[]>();
-                string data = score + "," + date + "," + course;
-                string[] scoreString = data.Split(',');
-                newScore.Add(scoreString);
+                string[] newScore = new string[3];
+                newScore[0] = score; newScore[1] = date; newScore[2] = course;
                 string newHandicap = Golfer.updateScores(newScore, name + ".txt");
                 NewHandicapDisplayer.Text = "Your updated handicap is: " + newHandicap;
 
